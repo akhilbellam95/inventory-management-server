@@ -1,12 +1,13 @@
-import express, { Application } from "express";
-// import userRoutes from './routes/userRoutes';
+import express from "express";
 
-const app: Application = express();
+const app = express();
 
-// Middleware
+// Middleware to parse JSON bodies
 app.use(express.json());
 
-// Routes
-// app.use('/api/users', userRoutes);
+// Define a route for the root URL
+app.get("/", (req, res) => {
+  res.send("Welcome to the Inventory Management API!");
+});
 
 export default app;
