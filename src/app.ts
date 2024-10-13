@@ -1,13 +1,15 @@
 import express from "express";
+import apiRoutes from "./routes/api";
 
 const app = express();
 
-// Middleware to parse JSON bodies
 app.use(express.json());
 
-// Define a route for the root URL
+// Root route
 app.get("/", (req, res) => {
   res.send("Welcome to the Inventory Management API!");
 });
+
+app.use("/api", apiRoutes);
 
 export default app;
