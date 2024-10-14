@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node dist/server.js",
+    "start": "node dist/server.js",
     "build": "npx tsc --noEmitOnError && copyfiles -u 1 \"src/data/**/*\" dist/",
     "dev": "ts-node src/server.ts",
     "serve": "node dist/server.js"
