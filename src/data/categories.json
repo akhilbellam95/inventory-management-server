@@ -1,3 +1,5 @@
 {
-  "categories": [{ "categorId": "CAT0001", "name": "", "description": "" }]
+  "categories": [
+    { "id": "1", "categorId": "CAT0001", "name": "", "description": "" }
+  ]
 }
