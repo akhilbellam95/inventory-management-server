@@ -1,5 +1,22 @@
 {
   "categories": [
-    { "id": "1", "categorId": "CAT0001", "name": "", "description": "" }
+    {
+      "id": "1",
+      "categorId": "CAT0001",
+      "name": "Cement",
+      "description": "Material used for construction"
+    },
+    {
+      "id": "2",
+      "categorId": "CAT0002",
+      "name": "Steel",
+      "description": "Material used for construction"
+    },
+    {
+      "id": "3",
+      "categorId": "CAT0003",
+      "name": "Wood",
+      "description": "Material used for construction"
+    }
   ]
 }
