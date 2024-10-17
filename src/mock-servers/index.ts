@@ -1,4 +1,4 @@
-import { getDataFromJsonFile } from "../utils/fileOperations"; // Adjusted import for utils
+import { getDataFromJsonFile } from "../utils/fileOperations";
 
 export const getMockVendors = (): Promise<{ vendors: Vendor[] }> => {
   return new Promise((resolve) => {
@@ -13,5 +13,13 @@ export const getMockCategories = (): Promise<{ categories: Category[] }> => {
     setTimeout(() => {
       resolve(getDataFromJsonFile("categories.json"));
     }, 2000);
+  });
+};
+
+export const getMockProducts = (): Promise<{ products: Product[] }> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(getDataFromJsonFile("products.json"));
+    });
   });
 };

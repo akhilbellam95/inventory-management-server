@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productId": "PRDT0001",
+      "name": "Steel 30MM",
+      "description": "Diameter 30MM",
+      "categoryName": "Steel",
+      "categorId": "CAT0002"
+    },
+    {
+      "id": "2",
+      "productId": "PRDT0002",
+      "name": "Steel 50MM",
+      "categoryName": "Steel",
+      "categorId": "CAT0002",
+      "description": "Diameter 50MM"
+    }
+  ]
+}

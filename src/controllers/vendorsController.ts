@@ -1,6 +1,7 @@
 import { Response, Request } from "express";
 import { getMockVendors } from "../mock-servers";
 import { writeToJsonFile } from "../utils/fileOperations";
+import { generateId } from "../utils/common";
 
 // Get Vendors list
 export const getVendors = async (req: Request, res: Response) => {
@@ -12,15 +13,16 @@ export const getVendors = async (req: Request, res: Response) => {
 export const addVendor = async (req: Request, res: Response) => {
   const { name, email, phone, address } = req.body;
   const vendorsList: { vendors: Vendor[] } = await getMockVendors();
+  const newId =
+    parseInt(vendorsList.vendors[vendorsList.vendors.length - 1].id) + 1;
   const newVendor = {
     name,
     email,
     phone,
     address,
-    id: vendorsList.vendors[vendorsList.vendors.length - 1].id + 1,
+    id: newId.toString(),
+    vendorId: generateId("VN", vendorsList.vendors),
   };
-  // const vendorsList: { vendors: Vendor[] } = await getMockVendors();
-  console.log(vendorsList, req.body);
   vendorsList.vendors.push(newVendor);
   const content = JSON.stringify(vendorsList);
   writeToJsonFile("vendors.json", content);
@@ -33,7 +35,7 @@ export const updateVendor = async (req: Request, res: Response) => {
   const { name, email, phone, address } = req.body;
   const vendorsList: { vendors: Vendor[] } = await getMockVendors();
   const vendorIndex = vendorsList.vendors.findIndex(
-    (vendor) => vendor.id === parseInt(id)
+    (vendor) => vendor.id === id
   );
   if (vendorIndex !== -1) {
     vendorsList.vendors[vendorIndex].name = name;

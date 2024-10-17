@@ -5,10 +5,12 @@ import {
   getVendors,
   updateVendor,
 } from "../controllers/vendorsController";
+
 import {
   addCategory,
   getCategories,
 } from "../controllers/categoriesController";
+import { addProduct, getProducts } from "../controllers/productsController";
 
 const router = Router();
 
@@ -21,4 +23,7 @@ router.put("/vendors", updateVendor);
 router.get("/categories", getCategories);
 router.post("/categories", addCategory);
 
+// Product Routes
+router.get("/products", getProducts);
+router.post("/products", addProduct);
 export default router;
