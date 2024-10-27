@@ -13,7 +13,8 @@ export const getVendors = async (req: Request, res: Response) => {
 // Add new Vendor
 export const addVendor = async (req: Request, res: Response) => {
   console.log(req);
-  const { name, email, phone, address, gstNum } = req.body;
+  const { name, email, phone, address, gstNum, category, subCategory } =
+    req.body;
   const vendorsList: { vendors: Vendor[] } = await getMockVendors();
   const newId =
     parseInt(vendorsList.vendors[vendorsList.vendors.length - 1].id) + 1;
@@ -23,6 +24,8 @@ export const addVendor = async (req: Request, res: Response) => {
     gstNum,
     phone,
     address,
+    category,
+    subCategory,
     id: newId.toString(),
     vendorId: generateId("VN", vendorsList.vendors),
   };
@@ -35,7 +38,8 @@ export const addVendor = async (req: Request, res: Response) => {
 // Update Vendor based on ID
 export const updateVendorById = async (req: Request, res: Response) => {
   const { id } = req.query;
-  const { name, email, phone, address, gstNum } = req.body;
+  const { name, email, phone, address, gstNum, category, subCategory } =
+    req.body;
 
   if (!id) {
     res.status(400).json({ message: "ID is required" });
@@ -51,6 +55,8 @@ export const updateVendorById = async (req: Request, res: Response) => {
     vendorsList.vendors[vendorIndex].phone = phone;
     vendorsList.vendors[vendorIndex].address = address;
     vendorsList.vendors[vendorIndex].gstNum = gstNum;
+    vendorsList.vendors[vendorIndex].category = category;
+    vendorsList.vendors[vendorIndex].subCategory = subCategory;
     const content = JSON.stringify(vendorsList);
     try {
       writeToJsonFile("vendors.json", content);

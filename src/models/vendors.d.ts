@@ -6,4 +6,6 @@ interface Vendor {
   phone: string;
   gstNum: string;
   vendorId: string;
+  category: string;
+  subCategory: string;
 }
