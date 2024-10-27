@@ -8,7 +8,8 @@
     "start": "node dist/server.js",
     "build": "npx tsc --noEmitOnError && copyfiles -u 1 \"src/data/**/*\" dist/",
     "dev": "ts-node src/server.ts",
-    "serve": "node dist/server.js"
+    "serve": "node dist/server.js",
+    "start:nodemon": "nodemon --watch src --watch dist dist/server.js"
   },
   "keywords": [],
   "author": "akhil-bellam",
@@ -27,6 +28,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.4",
     "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }

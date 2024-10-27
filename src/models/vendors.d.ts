@@ -4,4 +4,6 @@ interface Vendor {
   address: string;
   email: string;
   phone: string;
+  gstNum: string;
+  vendorId: string;
 }

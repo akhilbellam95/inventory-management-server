@@ -3,18 +3,21 @@
     {
       "id": "1",
       "productId": "PRDT0001",
-      "name": "Steel 30MM",
+      "name": "Steel 8MM",
       "description": "Diameter 30MM",
       "categoryName": "Steel",
-      "categorId": "CAT0002"
+      "categorId": "CAT0002",
+      "price": "52300",
+      "unit": "tonne"
     },
     {
       "id": "2",
       "productId": "PRDT0002",
-      "name": "Steel 50MM",
+      "name": "Steel 10MM",
       "categoryName": "Steel",
       "categorId": "CAT0002",
-      "description": "Diameter 50MM"
+      "description": "Diameter 50MM",
+      "price": ""
     }
   ]
 }

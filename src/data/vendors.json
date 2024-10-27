@@ -1,28 +1,220 @@
 {
   "vendors": [
     {
-      "id": "1",
-      "name": "Vendor 1",
-      "address": "Address 1",
-      "phone": "Phone 1",
-      "email": "vendor1@example.com",
-      "vendorId": "VN0001"
+      "id": 1,
+      "vendorId": "V001",
+      "name": "Alpha Supplies",
+      "phone": "9876543210",
+      "gstNum": "27AAECS1234L1Z5",
+      "address": "123 Market Street, Mumbai, Maharashtra",
+      "email": "contact@alphasupplies.com"
     },
     {
-      "id": "2",
-      "name": "Vendor 2",
-      "address": "Address 2",
-      "phone": "Phone 2",
-      "email": "vendor2@example.com",
-      "vendorId": "VN0002"
+      "id": 2,
+      "vendorId": "V002",
+      "name": "Beta Traders",
+      "phone": "8765432109",
+      "gstNum": "29AAECB5678M1Z4",
+      "address": "56 Park Avenue, Bangalore, Karnataka",
+      "email": "sales@betatraders.com"
     },
     {
-      "id": "3",
-      "name": "Vendor 3",
-      "address": "Address 3",
-      "phone": "Phone 3",
-      "email": "vendor3@example.com",
-      "vendorId": "VN0003"
+      "id": 3,
+      "vendorId": "V003",
+      "name": "Gamma Materials",
+      "phone": "7654321098",
+      "gstNum": "22AACCG7890K1Z2",
+      "address": "77 Industrial Zone, Kolkata, West Bengal",
+      "email": "support@gammamaterials.com"
+    },
+    {
+      "id": 4,
+      "vendorId": "V004",
+      "name": "Delta Distributors",
+      "phone": "6543210987",
+      "gstNum": "32AADCD3456N1Z3",
+      "address": "45 Green Lane, Kochi, Kerala",
+      "email": "info@deltadistributors.com"
+    },
+    {
+      "id": 5,
+      "vendorId": "V005",
+      "name": "Epsilon Solutions",
+      "phone": "5432109876",
+      "gstNum": "19AABCE6789J1Z5",
+      "address": "89 Kings Road, Jaipur, Rajasthan",
+      "email": "services@epsilonsolutions.com"
+    },
+    {
+      "id": 6,
+      "vendorId": "V006",
+      "name": "Zeta Equipments",
+      "phone": "4321098765",
+      "gstNum": "09AAACF0123H1Z1",
+      "address": "101 Broadway, Ahmedabad, Gujarat",
+      "email": "contact@zetaequipments.com"
+    },
+    {
+      "id": 7,
+      "vendorId": "V007",
+      "name": "Eta Enterprises",
+      "phone": "3210987654",
+      "gstNum": "33AAGCG1234L1Z4",
+      "address": "202 MG Road, Chennai, Tamil Nadu",
+      "email": "info@etaenterprises.com"
+    },
+    {
+      "id": 8,
+      "vendorId": "V008",
+      "name": "Theta Tools",
+      "phone": "2109876543",
+      "gstNum": "10AAADG2345K1Z6",
+      "address": "15 Oak Street, Pune, Maharashtra",
+      "email": "support@thetatools.com"
+    },
+    {
+      "id": 9,
+      "vendorId": "V009",
+      "name": "Iota Industries",
+      "phone": "1098765432",
+      "gstNum": "18AACCH5678L1Z3",
+      "address": "500 High Road, Lucknow, Uttar Pradesh",
+      "email": "sales@iotainc.com"
+    },
+    {
+      "id": 10,
+      "vendorId": "V010",
+      "name": "Kappa Corp",
+      "phone": "1987654321",
+      "gstNum": "27AAADI6789M1Z5",
+      "address": "33 New Market, Hyderabad, Telangana",
+      "email": "contact@kappacorp.com"
+    },
+    {
+      "id": 11,
+      "vendorId": "V011",
+      "name": "Lambda Logistics",
+      "phone": "9988776655",
+      "gstNum": "24AAACJ4567L1Z6",
+      "address": "400 West Street, Surat, Gujarat",
+      "email": "logistics@lambda.com"
+    },
+    {
+      "id": 12,
+      "vendorId": "V012",
+      "name": "Mu Mart",
+      "phone": "8877665544",
+      "gstNum": "11AAACL7890N1Z9",
+      "address": "67 Central Avenue, Indore, Madhya Pradesh",
+      "email": "sales@mumart.com"
+    },
+    {
+      "id": 13,
+      "vendorId": "V013",
+      "name": "Nu Services",
+      "phone": "7766554433",
+      "gstNum": "15AABCD1234P1Z1",
+      "address": "90 East Street, Bhopal, Madhya Pradesh",
+      "email": "contact@nuservices.com"
+    },
+    {
+      "id": 14,
+      "vendorId": "V014",
+      "name": "Xi Technologies",
+      "phone": "6655443322",
+      "gstNum": "23AAADG2345R1Z3",
+      "address": "101 River Road, Nagpur, Maharashtra",
+      "email": "tech@xitech.com"
+    },
+    {
+      "id": 15,
+      "vendorId": "V015",
+      "name": "Omni Supplies",
+      "phone": "5544332211",
+      "gstNum": "32AADCF5678Q1Z4",
+      "address": "123 Business Hub, Coimbatore, Tamil Nadu",
+      "email": "supplies@omni.com"
+    },
+    {
+      "id": 16,
+      "vendorId": "V016",
+      "name": "Panda Products",
+      "phone": "4433221100",
+      "gstNum": "21AACCB6789S1Z8",
+      "address": "56 Hill Road, Ranchi, Jharkhand",
+      "email": "products@pandaco.com"
+    },
+    {
+      "id": 17,
+      "vendorId": "V017",
+      "name": "Quantum Innovations",
+      "phone": "3322110099",
+      "gstNum": "07AAACG3456T1Z7",
+      "address": "88 Horizon Plaza, New Delhi, Delhi",
+      "email": "contact@quantum.com"
+    },
+    {
+      "id": 18,
+      "vendorId": "V018",
+      "name": "Rocket Retail",
+      "phone": "2211009988",
+      "gstNum": "30AADCH5678U1Z9",
+      "address": "33 Starlight Avenue, Goa, Goa",
+      "email": "retail@rocket.com"
+    },
+    {
+      "id": 19,
+      "vendorId": "V019",
+      "name": "Sigma Solutions",
+      "phone": "1100998877",
+      "gstNum": "26AAAFI1234V1Z2",
+      "address": "99 North Boulevard, Panaji, Goa",
+      "email": "solutions@sigma.com"
+    },
+    {
+      "id": 20,
+      "vendorId": "V020",
+      "name": "Tango Trade",
+      "phone": "9900887766",
+      "gstNum": "25AABCD6789W1Z6",
+      "address": "45 Main Square, Thane, Maharashtra",
+      "email": "trade@tango.com"
+    },
+    {
+      "id": 21,
+      "vendorId": "V021",
+      "name": "UniMart",
+      "phone": "8800776655",
+      "gstNum": "29AAAHF7890X1Z1",
+      "address": "222 Skyline Avenue, Mysore, Karnataka",
+      "email": "contact@unimart.com"
+    },
+    {
+      "id": 22,
+      "vendorId": "V022",
+      "name": "Vega Ventures",
+      "phone": "7700665544",
+      "gstNum": "31AADCJ3456Y1Z3",
+      "address": "67 Maple Street, Amritsar, Punjab",
+      "email": "info@vegaventures.com"
+    },
+    {
+      "id": 23,
+      "vendorId": "V023",
+      "name": "Wave Works",
+      "phone": "6600554433",
+      "gstNum": "16AABCL1234Z1Z5",
+      "address": "121 East End, Patna, Bihar",
+      "email": "works@wave.com"
+    },
+    {
+      "id": 24,
+      "vendorId": "V024",
+      "name": "Xeno Exports",
+      "phone": "5500443322",
+      "gstNum": "27AAADK2345A1Z7",
+      "address": "78 Bright Lane, Ludhiana, Punjab",
+      "email": "exports@xeno.com"
     }
   ]
 }

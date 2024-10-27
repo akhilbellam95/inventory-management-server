@@ -5,4 +5,5 @@ interface Product {
   categoryName: string;
   categoryId: string;
   productId: string;
+  price: number;
 }
