@@ -1,9 +1,8 @@
 interface Product {
-  id: string;
+  _id?: string;
   name: string;
   description: string;
-  categoryName: string;
-  categoryId: string;
-  productId: string;
-  price: number;
+  category: string;
+  subCategory: string;
+  // productId: string;
 }

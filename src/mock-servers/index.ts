@@ -1,6 +1,8 @@
+import { IProduct } from "../models/products";
+import { IVendor } from "../models/vendor";
 import { getDataFromJsonFile } from "../utils/fileOperations";
 
-export const getMockVendors = (): Promise<{ vendors: Vendor[] }> => {
+export const getMockVendors = (): Promise<{ vendors: IVendor[] }> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(getDataFromJsonFile("vendors.json"));
@@ -16,7 +18,7 @@ export const getMockCategories = (): Promise<{ categories: Category[] }> => {
   });
 };
 
-export const getMockProducts = (): Promise<{ products: Product[] }> => {
+export const getMockProducts = (): Promise<{ products: IProduct[] }> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(getDataFromJsonFile("products.json"));
