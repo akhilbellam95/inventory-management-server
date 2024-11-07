@@ -4,7 +4,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const uri = process.env.DB_URL || "";
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  tlsInsecure: true,
+});
 let db: Db;
 
 const connectDB = async (): Promise<void> => {
