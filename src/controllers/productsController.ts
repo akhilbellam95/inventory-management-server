@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { getMockProducts } from "../mock-servers";
-import { getProductsCollection } from "../db";
+import { getproductCategoriesCollection, getProductsCollection } from "../db";
 import { ObjectId } from "mongodb";
 import { IProduct } from "../models/products";
 
@@ -10,6 +10,16 @@ export const getProducts = async (req: Request, res: Response) => {
   const products = await productsCollection.find({}).toArray();
   console.log(products);
   res.status(200).json(products);
+};
+
+// Get Product Categories list
+export const getProductCategories = async (req: Request, res: Response) => {
+  const productCategoriesCollection = getproductCategoriesCollection();
+  const productCategories = await productCategoriesCollection
+    .find({})
+    .toArray();
+  const uniqueCategories = Array.from(new Set(productCategories));
+  res.status(200).json(uniqueCategories);
 };
 
 // Add new Product
@@ -29,10 +39,8 @@ export const addProduct = async (req: Request, res: Response) => {
   try {
     const productsCollection = getProductsCollection();
     const result = await productsCollection.insertOne(product);
-    if (result.insertedId === null) {
-      const products = await productsCollection.find({}).toArray();
-      res.status(201).json(products);
-    }
+    console.log(result);
+    res.status(201).json(product);
   } catch (error) {
     res.status(500).json({ message: "Error adding product" });
   }
@@ -88,7 +96,7 @@ export const deleteProductById = async (req: Request, res: Response) => {
     _id: new ObjectId(id as string),
   });
   if (result.deletedCount === 1) {
-    res.status(204).json();
+    res.status(204).json({ message: "Product deleted" });
   } else {
     res.status(404).json({ message: "Product not found" });
   }

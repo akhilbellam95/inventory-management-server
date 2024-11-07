@@ -1,7 +1,7 @@
 import { Response, Request } from "express";
 import { ObjectId } from "mongodb";
 import Vendor, { IVendor } from "../models/vendor"; // Assuming you have a Vendor model defined
-import { getVendorsCollection } from "../db";
+import { getvendorCategoriesCollection, getVendorsCollection } from "../db";
 
 // Get Vendors list
 export const getVendors = async (req: Request, res: Response) => {
@@ -9,6 +9,14 @@ export const getVendors = async (req: Request, res: Response) => {
   const vendors = await vendorsCollection.find({}).toArray();
   console.log(vendors);
   res.status(200).json(vendors);
+};
+
+// Get Vendor Categories list
+export const getVendorCategories = async (req: Request, res: Response) => {
+  const vendorCategoriesCollection = getvendorCategoriesCollection();
+  const vendorCategories = await vendorCategoriesCollection.find({}).toArray();
+  const uniqueCategories = Array.from(new Set(vendorCategories));
+  res.status(200).json(uniqueCategories);
 };
 
 // Add new Vendor
@@ -41,11 +49,8 @@ export const addVendor = async (req: Request, res: Response) => {
   const vendor: IVendor = new Vendor(newVendor);
   try {
     const vendorsCollection = getVendorsCollection();
-    const result = await vendorsCollection.insertOne(vendor);
-    if (result.insertedId === null) {
-      const vendors = await vendorsCollection.find({}).toArray();
-      res.status(201).json(vendors);
-    }
+    await vendorsCollection.insertOne(vendor);
+    res.status(201).json(vendor);
   } catch (error) {
     res.status(500).json({ message: "Error adding vendor", error });
   }
